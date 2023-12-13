@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    
+    <title>Login Page</title>
+</head>
+<body>
+    <section class="form-section">
+        <div class="container">
+            <div class="inner-container">
+
+                <img src="./images/contact.svg" alt="Logo" class="logo">
+                <form id="loginForm">
+                    <h1>Login</h1>
+
+                    <div class="input-wrap">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                  
+                    <div class="input-wrap">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+
+                    <div class="extra-field">
+                        <div class="remember-pass">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                        
+                        <div class="forgot-pass">
+                            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="validateLogin()">Sign In</button>
+
+                    <hr>
+                </form>
+
+                <form id="resetPasswordForm" style="display: none;">
+                    <h1>Reset Password</h1>
+
+                    <div class="input-wrap">
+                        <input type="text" id="resetEmail" placeholder="Enter your email" required>
+                    </div>
+
+                    <button type="button" onclick="sendResetLink()">Send Reset Link</button>
+
+                    <p class="toggle-form">Remember your password? <a href="#" onclick="showLoginForm()">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var rememberMe = document.getElementById('remember').checked;
+
+            if (username === 'Amit10x' && password === '12345') {
+                if (rememberMe) {
+                    localStorage.setItem('Amit10x', username);
+                } else {
+                    localStorage.removeItem('Amit10x'); 
+                }
+
+                alert('Login successful! Redirecting to the home page.');
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+
+        function forgotPassword() {
+            showResetPasswordForm();
+        }
+
+        function showResetPasswordForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('resetPasswordForm').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('resetPasswordForm').style.display = 'none';
+        }
+
+        function sendResetLink() {
+            var userEmail = document.getElementById('resetEmail').value;
+
+            if (userEmail) {
+                // Here you can implement the actual password recovery logic
+                // For simplicity, let's just show an alert
+                alert('Password reset link sent to ' + userEmail);
+                showLoginForm();
+            }
+        }
+    </script>
+   
+    <script src="script.js"></script>
+</body>
+</html>

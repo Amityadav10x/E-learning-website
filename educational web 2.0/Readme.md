@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduConnect: Multi-Page Educational Website</title>
+    
 </head>
 <body>
     <h1>EduConnect: Multi-Page Educational Website</h1>
@@ -56,7 +56,7 @@
     </ul>
 
   <h2>Author</h2>
-    <p><a href="https://www.linkedin.com/in/your-profile">Amit</a></p>
+    <p><a href="https://www.linkedin.com/in/amit-yadav-417bb5288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Amit</a></p>
 
   <h2>License</h2>
     <p>This project is licensed under the MIT License. See the LICENSE file for details.</p>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduConnect - Project Overview</title>
+    
     
 </head>
 <body>
@@ -37,7 +37,7 @@
     </ol>
 
    <h2>Screenshots</h2>
-    <p>You can view the screenshots of the project <a href="https://yourlinktoscreenshots.com" target="_blank">here</a>.</p>
+   <p>You can view the screenshots of the project <a href="https://drive.google.com/file/d/19GR4XKlgwls34cJGvy4tbsEqMvWRTb2w/view?usp=sharing" target="_blank">here</a>.</p>
 
   <h2>Future Enhancements</h2>
     <ul>
